@@ -1,0 +1,297 @@
+:root {
+    --primary-color: #c8102e; /* Red */
+    --secondary-color: #003893; /* Blue */
+    --text-color: #333;
+    --background-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.coat-of-arms {
+    height: 80px; /* Adjust height as needed */
+    width: auto;
+}
+
+.container {
+    max-width: 1200px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between navigation items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+main {
+    padding: 40px 0; /* Add padding to the main section */
+}
+
+section {
+    margin-bottom: 40px; /* Space between sections */
+    background: white;
+    padding: 25px; /* Padding inside sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Grid Container Styles */
+.grid-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between items */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Notice and Announcement Styles */
+.notice, .announcement {
+    flex: 0 1 calc(50% - 20px); /* Two items side by side with space */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 20px; /* Padding inside notices/announcements */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+    background-color: white; /* Background color */
+    min-height: 200px; /* Ensure a minimum height for square appearance */
+}
+
+/* When the item is in view */
+.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.notice:hover, .announcement:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Centering the Contact Form */
+.contact-form-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px 0; /* Space around the form */
+}
+
+#contact-form {
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width for the form */
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Centering the Contact Form */
+.contact-form-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px 0; /* Space around the form */
+}
+
+#contact-form {
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width for the form */
+    background-color: #ffffff; /* White background for the form */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#contact-form label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px; /* Padding inside inputs and textarea */
+    margin-bottom: 15px; /* Space below inputs and textarea */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+#contact-form button {
+    background-color: var(--primary-color); /* Use primary color for button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+#contact-form button:hover {
+    background-color: darken(var(--primary-color), 10%); /* Darken on hover */
+}
+.contact-info {
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Space above the section */
+    padding: 15px; /* Padding around the section */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 16px; /* Font size for better readability */
+}
+
+/* Notice and Announcement Styles */
+.notice {
+    flex: 0 1 calc(50% - 20px); /* Two items side by side with space */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 20px; /* Padding inside notices */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+    background-color: #f0f8ff; /* Light blue background for notices */
+    min-height: 200px; /* Ensure a minimum height for square appearance */
+}
+
+.announcement {
+    flex: 0 1 calc(50% - 20px); /* Two items side by side with space */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 20px; /* Padding inside announcements */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+    background-color: #fff8e1; /* Light yellow background for announcements */
+    min-height: 200px; /* Ensure a minimum height for square appearance */
+}
+/* Keyframe animation for sliding up */
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px); /* Start slightly below */
+        opacity: 0; /* Start hidden */
+    }
+    100% {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Notice and Announcement Styles */
+.notice, .announcement {
+    flex: 0 1 calc(50% - 20px); /* Two items side by side with space */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 20px; /* Padding inside notices/announcements */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+    background-color: #f0f0f0; /* Light blue background for notices */
+    min-height: 200px; /* Ensure a minimum height for square appearance */
+    animation: slideUp 0.5s ease forwards; /* Apply the slide-up animation */
+    opacity: 0; /* Start hidden */
+}
+
+/* When the item is in view */
+.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Title Styles for Notices */
+.notice h3 {
+    color: #e74c3c /* Darker shade for notice titles */
+}
+
+/* Title Styles for Announcements */
+.announcement h3 {
+    color: #e74c3c; /* Red shade for announcement titles */
+}
+
+#search-filter {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the left and right */
+    margin-bottom: 20px; /* Space below the search/filter section */
+}
+
+#search {
+    flex: 1; /* Takes up available space */
+}
+
+#filter-language {
+    display: flex; /* Aligns filter and language selectors in a row */
+    gap: 10px; /* Space between the selectors */
+}
+
+#filter-language select {
+    padding: 5px; /* Padding for better appearance */
+}
